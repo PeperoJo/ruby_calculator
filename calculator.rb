@@ -1,4 +1,5 @@
 require 'colorize'
+include Math
 
 startscreen =  "
                                    +--------------------------------------------------+
@@ -60,8 +61,8 @@ def pyth
   end
 end
 
-def sin(deg)
-  rad = (deg * 180) / 3.141
+def sine(deg)
+  rad = (deg * 3.14159) / 180
   return sin(rad)
 end
 
@@ -85,7 +86,7 @@ def compute(calc)
   elsif calc.include? "pyth"
     return pyth
   elsif calc.include? "sin"
-    return sin(calc[3..-1].to_f)
+    return sine(calc[4..-1].to_f)
   end
 end
 
